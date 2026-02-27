@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Pretty Lashes by Diamond</title>
     <style>
         /* --- GLOBAL STYLES & RESET --- */
@@ -744,9 +744,9 @@
             <img class="full-width-image" src="https://i.postimg.cc/fTHgBgQ5/Screenshot-2026-02-27-094113.png" alt="Top Image - Replace with direct image link">
         </div>
 
-        <!-- HERO IMAGE WITH OVERLAY -->
+        <!-- HERO IMAGE WITH OVERLAY - YOUR NEW IMAGE IS HERE! -->
         <div class="hero-container">
-            <img class="hero-image" src="https://i.pinimg.com/736x/0a/a8/3b/0aa83b57dca86a1ca88d871a4c564840.jpg" alt="Hero Image with lashes">
+            <img class="hero-image" src="https://i.postimg.cc/cL07bCjK/637429243_895140273129898_73975296852449724-n.jpg" alt="Pretty Lashes by Diamond Hero">
             <div class="hero-overlay">
                 <div class="brand-title">Pretty Lashes by Diamond</div>
                 <a href="#book" class="book-now-btn">Book Now</a>
