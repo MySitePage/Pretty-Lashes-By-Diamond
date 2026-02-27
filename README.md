@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pretty Lashes by Diamond</title>
     <style>
         /* --- GLOBAL STYLES & RESET --- */
@@ -17,16 +17,11 @@
             line-height: 1.6;
             color: #333;
             background-color: black;
-            overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+            overflow-x: hidden;
         }
 
-        /* --- BETTER CURSIVE FONT STACK --- */
-        .cursive-font {
-            font-family: 'Playfair Display', 'Times New Roman', serif;
-            font-style: italic;
-            font-weight: 700;
-            letter-spacing: 0.02em;
-        }
+        /* Import Playfair Display for elegant cursive */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&display=swap');
 
         /* Apply to all cursive elements */
         .brand-title, .book-now-btn, .booking-title, .form-group label, 
@@ -35,9 +30,6 @@
             font-style: italic;
             font-weight: 700;
         }
-
-        /* Import Playfair Display for better cursive look */
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&display=swap');
 
         /* --- LAYOUT: IMAGES TOUCH CORNERS/SIDES & STACK --- */
         .full-width-image {
@@ -69,7 +61,6 @@
             display: block;
             width: 100%;
             height: auto;
-            min-height: 300px; /* Better mobile display */
             object-fit: cover;
         }
 
@@ -89,9 +80,8 @@
             padding: 15px;
         }
 
-        /* --- HOT PINK WITH WHITE OUTLINE & NEON GLOW - MOBILE OPTIMIZED --- */
+        /* --- HOT PINK WITH WHITE OUTLINE & NEON GLOW - DEVICE OPTIMIZED --- */
         .brand-title {
-            font-size: clamp(2.2rem, 10vw, 7rem);
             color: #FF69B4;
             text-shadow: 
                 -1px -1px 0 white,  
@@ -105,11 +95,9 @@
             margin-bottom: 20px;
             letter-spacing: 2px;
             background-color: rgba(0, 0, 0, 0.25);
-            padding: 10px 25px;
             border-radius: 60px;
             border: 3px solid #FF69B4;
             box-shadow: 0 0 40px #FF69B4, inset 0 0 15px #FF69B4;
-            max-width: 95%;
             word-break: break-word;
         }
 
@@ -117,10 +105,8 @@
             display: inline-block;
             background-color: black;
             color: #FF69B4;
-            font-size: clamp(1.5rem, 6vw, 3.5rem);
             font-weight: 800;
             text-decoration: none;
-            padding: 15px 40px;
             border: 4px solid #FF69B4;
             border-radius: 60px;
             box-shadow: 
@@ -136,21 +122,6 @@
                 1px -1px 0 white,
                 -1px 1px 0 white,
                 1px 1px 0 white;
-            white-space: nowrap;
-        }
-
-        /* Mobile adjustment for button */
-        @media (max-width: 480px) {
-            .book-now-btn {
-                padding: 12px 30px;
-                white-space: normal;
-                font-size: 1.8rem;
-            }
-            
-            .brand-title {
-                padding: 8px 20px;
-                font-size: 2.5rem;
-            }
         }
 
         .book-now-btn:hover {
@@ -162,7 +133,7 @@
             text-shadow: none;
         }
 
-        /* --- BOOKING PAGE STYLES - MOBILE FRIENDLY --- */
+        /* --- BOOKING PAGE STYLES --- */
         .booking-page {
             background-color: black;
             min-height: 100vh;
@@ -170,7 +141,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px 15px;
             font-family: sans-serif;
             border-top: 12px solid #FF69B4;
             border-bottom: 12px solid #FF69B4;
@@ -178,43 +148,18 @@
         }
 
         .booking-container {
-            max-width: 900px;
             width: 100%;
             background-color: #0a0a0a;
             border: 6px solid #FF69B4;
             border-radius: 40px;
-            padding: 40px 30px;
             box-shadow: 
                 0 0 60px #FF69B4,
                 inset 0 0 25px rgba(255, 105, 180, 0.5);
         }
 
-        /* Tablet adjustments */
-        @media (min-width: 768px) and (max-width: 1024px) {
-            .booking-container {
-                padding: 50px 40px;
-                max-width: 700px;
-            }
-        }
-
-        /* Mobile adjustments */
-        @media (max-width: 767px) {
-            .booking-container {
-                padding: 30px 20px;
-                border-width: 4px;
-                border-radius: 30px;
-            }
-            
-            .booking-page {
-                padding: 15px 10px;
-            }
-        }
-
         .booking-title {
             color: #FF69B4;
-            font-size: clamp(2.8rem, 8vw, 5rem);
             text-align: center;
-            margin-bottom: 35px;
             text-shadow: 
                 -2px -2px 0 white,  
                 2px -2px 0 white,
@@ -226,7 +171,6 @@
             line-height: 1.3;
             word-break: break-word;
             background-color: black;
-            padding: 15px 25px;
             border-radius: 80px;
             border: 4px solid #FF69B4;
             display: inline-block;
@@ -234,32 +178,21 @@
             margin-left: auto;
             margin-right: auto;
             box-shadow: 0 0 50px #FF69B4;
-            max-width: 95%;
         }
 
         .booking-form {
             display: flex;
             flex-direction: column;
-            gap: 25px;
-        }
-
-        /* Mobile gap adjustment */
-        @media (max-width: 480px) {
-            .booking-form {
-                gap: 20px;
-            }
         }
 
         .form-group {
             display: flex;
             flex-direction: column;
-            gap: 8px;
         }
 
         .form-group label {
             color: #FF69B4;
             font-weight: 700;
-            font-size: clamp(1.3rem, 4vw, 1.8rem);
             letter-spacing: 1px;
             text-shadow: 
                 -1px -1px 0 white,  
@@ -276,24 +209,12 @@
             background-color: black;
             border: 3px solid #FF69B4;
             border-radius: 20px;
-            padding: 15px 20px;
             color: white;
-            font-size: 1rem;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             box-shadow: 0 0 15px #FF69B4, inset 0 0 4px #FF69B4;
             width: 100%;
-            -webkit-appearance: none; /* Better mobile styling */
+            -webkit-appearance: none;
             appearance: none;
-        }
-
-        /* Mobile input padding */
-        @media (max-width: 480px) {
-            .form-group input,
-            .form-group select,
-            .form-group textarea {
-                padding: 12px 15px;
-                font-size: 16px; /* Prevents zoom on mobile */
-            }
         }
 
         .form-group input:focus,
@@ -309,7 +230,6 @@
         .form-group textarea::placeholder {
             color: #aaa;
             font-style: italic;
-            font-size: 0.95rem;
         }
 
         .form-group select {
@@ -323,18 +243,14 @@
         .form-group select option {
             background-color: black;
             color: #FF69B4;
-            padding: 12px;
         }
 
         .submit-btn {
             background-color: #FF69B4;
             color: black;
             border: 4px solid white;
-            font-size: clamp(2rem, 6vw, 3rem);
-            padding: 20px 30px;
             border-radius: 80px;
             cursor: pointer;
-            margin-top: 30px;
             font-weight: 800;
             box-shadow: 
                 0 0 40px #FF69B4,
@@ -342,7 +258,6 @@
                 inset 0 0 15px black;
             transition: all 0.3s ease;
             text-transform: uppercase;
-            letter-spacing: 3px;
             text-shadow: 
                 -1px -1px 0 white,  
                 1px -1px 0 white,
@@ -350,16 +265,6 @@
                 1px 1px 0 white;
             width: 100%;
             font-style: italic;
-        }
-
-        /* Mobile button */
-        @media (max-width: 480px) {
-            .submit-btn {
-                padding: 15px 20px;
-                font-size: 2rem;
-                border-width: 3px;
-                margin-top: 20px;
-            }
         }
 
         .submit-btn:hover {
@@ -375,10 +280,9 @@
                 1px 1px 0 white;
         }
 
-        /* Page links - mobile responsive */
+        /* Page links */
         .page-links {
             background-color: black;
-            padding: 20px 15px;
             text-align: center;
             border-bottom: 6px solid #FF69B4;
             border-top: 6px solid #FF69B4;
@@ -386,12 +290,10 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 15px;
         }
 
         .page-links a {
             color: #FF69B4;
-            font-size: clamp(1.5rem, 5vw, 2.5rem);
             text-decoration: none;
             text-shadow: 
                 -1px -1px 0 white,  
@@ -400,7 +302,6 @@
                 1px 1px 0 white,
                 0 0 15px #FF69B4,
                 0 0 30px #FF69B4;
-            padding: 10px 25px;
             border: 3px solid #FF69B4;
             border-radius: 60px;
             background-color: rgba(255, 105, 180, 0.1);
@@ -408,24 +309,6 @@
             font-style: italic;
             font-weight: 700;
             display: inline-block;
-            white-space: nowrap;
-        }
-
-        /* Mobile nav */
-        @media (max-width: 480px) {
-            .page-links {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-                padding: 15px;
-            }
-            
-            .page-links a {
-                width: 80%;
-                white-space: normal;
-                padding: 8px 15px;
-                font-size: 2rem;
-            }
         }
 
         .page-links a:hover {
@@ -440,17 +323,14 @@
             background-color: black;
             color: #FF69B4;
             text-align: center;
-            padding: 25px 15px;
             border-top: 6px solid #FF69B4;
             border-bottom: 6px solid #FF69B4;
-            font-size: clamp(1.2rem, 4vw, 1.8rem);
             text-shadow: 
                 -1px -1px 0 white,  
                 1px -1px 0 white,
                 -1px 1px 0 white,
                 1px 1px 0 white,
                 0 0 15px #FF69B4;
-            letter-spacing: 2px;
             font-style: italic;
             font-weight: 700;
         }
@@ -477,7 +357,6 @@
             box-shadow: 0 0 40px #FF69B4;
         }
 
-        /* Last image section */
         .last-image-section {
             line-height: 0;
             font-size: 0;
@@ -494,8 +373,106 @@
             border-right: 6px solid #FF69B4;
         }
 
-        /* Mobile border adjustments */
-        @media (max-width: 480px) {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        button, a, input, select, textarea {
+            touch-action: manipulation;
+        }
+
+        /* ===== DEVICE-SPECIFIC OPTIMIZATIONS ===== */
+
+        /* --- MOBILE (up to 767px) --- */
+        @media (max-width: 767px) {
+            /* Hero section */
+            .brand-title {
+                font-size: clamp(2.2rem, 8vw, 3.5rem);
+                padding: 10px 20px;
+                margin-bottom: 15px;
+            }
+            
+            .book-now-btn {
+                font-size: clamp(1.5rem, 5vw, 2.2rem);
+                padding: 12px 30px;
+                white-space: normal;
+            }
+            
+            /* Booking page */
+            .booking-page {
+                padding: 15px 10px;
+                border-top-width: 8px;
+                border-bottom-width: 8px;
+            }
+            
+            .booking-container {
+                max-width: 100%;
+                padding: 25px 18px;
+                border-width: 4px;
+                border-radius: 30px;
+            }
+            
+            .booking-title {
+                font-size: clamp(2.2rem, 7vw, 3rem);
+                padding: 12px 18px;
+                margin-bottom: 25px;
+                border-width: 3px;
+            }
+            
+            .booking-form {
+                gap: 18px;
+            }
+            
+            .form-group {
+                gap: 6px;
+            }
+            
+            .form-group label {
+                font-size: 1.3rem;
+            }
+            
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 12px 15px;
+                font-size: 16px;
+                border-width: 2px;
+            }
+            
+            .submit-btn {
+                font-size: 1.8rem;
+                padding: 15px 20px;
+                margin-top: 20px;
+                border-width: 3px;
+            }
+            
+            /* Navigation */
+            .page-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                padding: 15px;
+                border-bottom-width: 4px;
+                border-top-width: 4px;
+            }
+            
+            .page-links a {
+                width: 80%;
+                font-size: 1.8rem;
+                padding: 8px 15px;
+                white-space: normal;
+            }
+            
+            /* Footer */
+            footer {
+                font-size: 1.2rem;
+                padding: 18px 12px;
+                border-top-width: 4px;
+                border-bottom-width: 4px;
+            }
+            
+            /* Image borders */
             .image-section {
                 border-bottom-width: 3px;
                 border-top-width: 3px;
@@ -515,55 +492,246 @@
                 border-left-width: 4px;
                 border-right-width: 4px;
             }
-            
-            .page-links {
-                border-bottom-width: 4px;
-                border-top-width: 4px;
-            }
-            
-            footer {
-                border-top-width: 4px;
-                border-bottom-width: 4px;
-            }
-            
-            .booking-page {
-                border-top-width: 8px;
-                border-bottom-width: 8px;
-            }
         }
 
-        /* Ensure images don't overflow */
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Touch-friendly improvements */
-        button, a, input, select, textarea {
-            touch-action: manipulation;
-        }
-
-        /* Better spacing for mobile */
-        @media (max-width: 380px) {
+        /* --- TABLET (768px to 1024px) --- */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            /* Hero section */
             .brand-title {
-                font-size: 2rem;
-                padding: 8px 15px;
+                font-size: clamp(3.5rem, 7vw, 5rem);
+                padding: 15px 35px;
+                margin-bottom: 25px;
+                border-width: 4px;
+            }
+            
+            .book-now-btn {
+                font-size: clamp(2rem, 4.5vw, 3rem);
+                padding: 18px 50px;
+            }
+            
+            /* Booking page */
+            .booking-page {
+                padding: 30px 25px;
+                border-top-width: 10px;
+                border-bottom-width: 10px;
+            }
+            
+            .booking-container {
+                max-width: 700px;
+                padding: 45px 40px;
+                border-width: 5px;
+                border-radius: 45px;
             }
             
             .booking-title {
-                font-size: 2.2rem;
-                padding: 12px 18px;
+                font-size: clamp(3.2rem, 6vw, 4.2rem);
+                padding: 18px 28px;
+                margin-bottom: 35px;
+            }
+            
+            .booking-form {
+                gap: 22px;
             }
             
             .form-group label {
+                font-size: 1.6rem;
+            }
+            
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 16px 22px;
+                font-size: 1.1rem;
+                border-width: 3px;
+            }
+            
+            .submit-btn {
+                font-size: 2.4rem;
+                padding: 18px 30px;
+                margin-top: 25px;
+            }
+            
+            /* Navigation */
+            .page-links {
+                gap: 20px;
+                padding: 18px;
+            }
+            
+            .page-links a {
+                font-size: 2.2rem;
+                padding: 12px 30px;
+            }
+            
+            /* Footer */
+            footer {
+                font-size: 1.6rem;
+                padding: 22px 18px;
+            }
+            
+            /* Keep image borders consistent */
+            .image-section {
+                border-bottom-width: 4px;
+                border-top-width: 4px;
+            }
+            
+            .full-width-image {
+                border-left-width: 4px;
+                border-right-width: 4px;
+            }
+        }
+
+        /* --- COMPUTER/DESKTOP (1025px and above) --- */
+        @media (min-width: 1025px) {
+            /* Hero section - larger and more dramatic */
+            .brand-title {
+                font-size: clamp(5rem, 8vw, 7rem);
+                padding: 20px 60px;
+                margin-bottom: 35px;
+                border-width: 5px;
+                box-shadow: 0 0 60px #FF69B4, inset 0 0 25px #FF69B4;
+            }
+            
+            .book-now-btn {
+                font-size: clamp(2.5rem, 4vw, 3.5rem);
+                padding: 25px 80px;
+                border-width: 5px;
+                box-shadow: 0 0 40px #FF69B4, 0 0 70px #FF69B4, inset 0 0 15px #FF69B4;
+            }
+            
+            .book-now-btn:hover {
+                transform: scale(1.05);
+            }
+            
+            /* Booking page - spacious and elegant */
+            .booking-page {
+                padding: 50px 30px;
+                border-top-width: 15px;
+                border-bottom-width: 15px;
+            }
+            
+            .booking-container {
+                max-width: 900px;
+                padding: 60px 60px;
+                border-width: 8px;
+                border-radius: 60px;
+            }
+            
+            .booking-title {
+                font-size: 5rem;
+                padding: 25px 45px;
+                margin-bottom: 45px;
+                border-width: 5px;
+            }
+            
+            .booking-form {
+                gap: 30px;
+            }
+            
+            .form-group {
+                gap: 10px;
+            }
+            
+            .form-group label {
+                font-size: 1.9rem;
+                letter-spacing: 1.5px;
+            }
+            
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 18px 25px;
                 font-size: 1.2rem;
+                border-width: 4px;
+                border-radius: 25px;
+            }
+            
+            .submit-btn {
+                font-size: 3rem;
+                padding: 25px 40px;
+                margin-top: 35px;
+                border-width: 5px;
+            }
+            
+            /* Navigation */
+            .page-links {
+                gap: 40px;
+                padding: 25px;
+                border-bottom-width: 8px;
+                border-top-width: 8px;
+            }
+            
+            .page-links a {
+                font-size: 2.5rem;
+                padding: 15px 40px;
+                border-width: 4px;
+                transition: all 0.3s ease;
+            }
+            
+            .page-links a:hover {
+                transform: scale(1.05);
+            }
+            
+            /* Footer */
+            footer {
+                font-size: 1.9rem;
+                padding: 30px 25px;
+                border-top-width: 8px;
+                border-bottom-width: 8px;
+            }
+            
+            /* Image borders - more prominent on desktop */
+            .image-section {
+                border-bottom-width: 5px;
+                border-top-width: 5px;
+            }
+            
+            .full-width-image {
+                border-left-width: 5px;
+                border-right-width: 5px;
+            }
+            
+            .last-image-section {
+                border-top-width: 10px;
+                border-bottom-width: 10px;
+            }
+            
+            .last-image-section img {
+                border-left-width: 8px;
+                border-right-width: 8px;
+            }
+        }
+
+        /* --- LARGE DESKTOP (1440px and above) --- */
+        @media (min-width: 1440px) {
+            .booking-container {
+                max-width: 1100px;
+                padding: 70px 80px;
+            }
+            
+            .brand-title {
+                font-size: 7rem;
+                padding: 25px 80px;
+            }
+            
+            .book-now-btn {
+                font-size: 3.5rem;
+                padding: 30px 100px;
+            }
+            
+            .page-links {
+                padding: 30px;
+            }
+            
+            .page-links a {
+                font-size: 2.8rem;
+                padding: 18px 50px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Page Links - Mobile Optimized -->
+    <!-- Page Links -->
     <div class="page-links">
         <a href="#home">Home</a>
         <a href="#book">Book Now</a>
@@ -646,7 +814,7 @@
     </footer>
 
     <script>
-        // Smooth scroll for navigation with mobile support
+        // Smooth scroll for navigation
         document.querySelectorAll('.page-links a, .book-now-btn').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
@@ -663,7 +831,7 @@
             });
         });
 
-        // Add touch optimization
+        // Add touch optimization class
         if ('ontouchstart' in window) {
             document.documentElement.classList.add('touch');
         }
